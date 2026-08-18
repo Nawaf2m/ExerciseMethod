@@ -5,12 +5,12 @@ import java.util.regex.Pattern;
 public class Main {
     public static void main(String[] args) {
         //Q1
-        int smallest = findSmallestNumber();
-        System.out.println("The smallest value is " + smallest);
-        System.out.println();
+//        int smallest = findSmallestNumber();
+//        System.out.println("The smallest value is " + smallest);
+//        System.out.println();
         //Q2
-        System.out.println("The number is " + checkNumber());
-        System.out.println();
+//        System.out.println("The number is " + checkNumber());
+//        System.out.println();
         //Q3
         checkPassword();
     }
@@ -63,6 +63,9 @@ public class Main {
         if (!Pattern.matches("\\w+", password)){
             valid = false;
         }
+        if (password.contains("_")){
+            valid = false;
+        }
 
         String c;
         int counter = 0;
@@ -86,4 +89,5 @@ public class Main {
             System.out.println("Password is not valid: " + password);
         }
     }
+
 }
